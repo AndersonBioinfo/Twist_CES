@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header-wrapper {
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  height: 150px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logotext {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.table-wrapper {
+  max-height: 700px; /* Set fixed height for the scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  width: 60%; /* Center the table with a fixed width */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #000000;
+  padding: 8px;
+  font-weight: 100;
+  font-size: 14px;
+  text-align: center;
+}
+
+th {
+  background-color: orangered;
+  color: white;
+  position: sticky;
+  top: 0; /* Keep header fixed during scroll */
+}
+
+input[type="text"] {
+  margin-left: 20px;
+  padding: 5px;
+  font-size: 14px;
+}
+.sort-arrows {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.sort-arrows span {
+  display: block;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  .header-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+  }
+
+  .logo img {
+    width: 120px;
+    margin-bottom: 5px;
+  }
+
+  .logotext {
+    font-size: 12px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}
